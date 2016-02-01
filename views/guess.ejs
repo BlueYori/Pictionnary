@@ -1,0 +1,63 @@
+<% var title = 'Dessin' %>
+<% include head %>
+   
+                    <script type="text/javascript">
+                        var size, color;
+                        var drawingCommands = <?=$commands?>;
+
+                        window.onload = function() {
+                            var canvas    = document.getElementById('myCanvas2');
+                            canvas.width  = 300;
+                            canvas.height = 400;
+                            var context   = canvas.getContext('2d');
+
+                            canvas.style.marginLeft = ((window.innerWidth - canvas.width) / 2) + "px";
+
+                            window.onresize = function() {
+                                canvas.style.marginLeft = ((window.innerWidth - canvas.width) / 2) + "px";
+                            };
+
+                            var draw = function(c) {
+                                context.beginPath();
+                                context.fillStyle = c.color;
+                                context.arc(c.x, c.y, c.size, 0, 2 * Math.PI);
+                                context.fill();
+                                context.closePath();
+                            };
+
+                            var clear = function() {
+                                context.clearRect(0, 0, canvas.width, canvas.height);
+                            };
+
+                            var i = 0;
+                            var iterate = function() {
+                                if (i >= drawingCommands.length) {
+                                    return;
+                                }
+
+                                var c = drawingCommands[i];
+
+                                switch (c.command) {
+                                    case "draw":
+                                        draw(c);
+                                        break;
+                                    case "clear":
+                                        clear();
+                                        break;
+                                    default:
+                                        console.error("cette commande n'existe pas "+ c.command);
+                                }
+
+                                i++;
+                                setTimeout(iterate,30);
+                            };
+
+                            iterate();
+                        };
+
+                    </script>
+
+<canvas id="myCanvas"></canvas>
+<a href="/main">Retour</a>
+
+<% include foot %>

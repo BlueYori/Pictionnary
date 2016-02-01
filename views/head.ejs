@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8">
+    <title>Pictionnary</title>
+    <meta name="description" content="description">
+    <meta name="author" content="Stéphanie Carrié">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="./css/custom-icons/css/custom-icons.css">
+    <link type="text/css" rel="stylesheet" href="./css/neko-framework/external-plugins/external-plugins.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/neko-framework/css/layout/neko-framework-layout.css">
+    <link type="text/css" rel="stylesheet" id="color" href="./css/neko-framework/css/color/neko-framework-color.css">
+    <script src="https://apis.google.com/js/platform.js" async defer>
+        {
+            lang: 'fr'
+        }
+    </script>
+    <script>
+    fileStream.readFile("./public/" + pageDemandee, 'utf8', function (errors, contents) {
+         if(errors){
+              console.log(errors);
+         }else{
+              response.end(contents);
+         }
+    });
+    </script>
+</head>
+
+
+<body>

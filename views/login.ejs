@@ -1,0 +1,44 @@
+<% var title = 'Formulaire login' %>
+<% include head %>
+    <main id="content">
+        <!-- form-->
+
+            <br/>
+
+            <div class="col-md-10 box padding-medium clearfix light-color col-lg-10 col-lg-offset-1">
+                <form class="inscription mb15 pb40 form-minimal" action="/login" method="post"
+                      name="login">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <section>
+
+                                <div class="form-group">
+                                    <label for="email">E-mail :</label>
+                                    <input type="text" class="form-control" name="email" id="email" placeholder="email"
+                                           required/>
+                                    <span class="form_hint help-block">Format attendu "name@something.com"</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password">Mot de passe :</label>
+                                    <input type="password" class="form-control" name="password" required
+                                           placeholder="Mot de passe">
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="row">
+                            <button type="submit" class="btn btn-lg btn-primary" id="submit">Se connecter</button>
+                            <div class="result"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+</div>
+</div>
+</section>
+</main>
+
+<% include foot %>

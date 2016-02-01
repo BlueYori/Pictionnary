@@ -1,0 +1,24 @@
+{
+  "name": "tplpsil",
+  "version": "0.0.1",
+  "description": "Authentification NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NODEJS"
+  ],
+  "author": "kbouzidi",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-session": "^1.13.0",
+    "log4js": "^0.6.29",
+    "morgan": "^1.6.1",
+    "mysql": "^2.10.2",
+    "serve-favicon": "^2.3.0"
+  }
+}
